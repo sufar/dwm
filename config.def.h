@@ -83,6 +83,7 @@ static const char *mictoggle[]  = { "/home/zugle/.config/dwm/scripts/micmute.sh"
 static const char *lightup[]  = { "/home/zugle/.config/dwm/scripts/lightup.sh", NULL };
 static const char *lightdown[]  = { "/home/zugle/.config/dwm/scripts/lightdown.sh", NULL };
 static const char *toggletouchpad[]  = { "/home/zugle/.config/dwm/scripts/toggle-touchpad.sh", NULL };
+static const char *lockscreen[]  = { "/home/zugle/.config/dwm/scripts/lockscreen.sh", NULL };
 static const char *screenshot[]  = { "flameshot", "gui", NULL };
 static const char scratchpadname[] = "scratchpad";
 // 120*34
@@ -90,15 +91,16 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "160x52
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ 0,                       	0x1008FF11,     spawn,          {.v = voldown } },
-	{ 0,                       	0x1008FF13,     spawn,          {.v = volup } },
-	{ 0,                       	0x1008FF12,     spawn,          {.v = voltoggle } },
+	{ 0,                       	0x1008FF11,     spawn,         {.v = voldown } },
+	{ 0,                       	0x1008FF13,     spawn,         {.v = volup } },
+	{ 0,                       	0x1008FF12,     spawn,         {.v = voltoggle } },
 	// { 0,                       	0x1008ffb2,     spawn,          {.v = mictoggle } },
-	{ 0,                            0x1008FF03,     spawn,          {.v = lightdown } },
-	{ 0,                            0x1008FF02,     spawn,          {.v = lightup } },
-	{ 0,                            0x1008ff58,     spawn,          {.v = screenshot } },
-	{ 0,                            0x1008ffa9,     spawn,          {.v = toggletouchpad } },
-	{ MODKEY|ShiftMask,             XK_a,     spawn,          {.v = screenshot } },
+	{ 0,                            0x1008FF03,     spawn,     {.v = lightdown } },
+	{ 0,                            0x1008FF02,     spawn,     {.v = lightup } },
+	{ 0,                            0x1008ff58,     spawn,     {.v = screenshot } },
+	{ 0,                            0x1008ffa9,     spawn,     {.v = toggletouchpad } },
+  { MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockscreen }  },
+	{ MODKEY|ShiftMask,             XK_a,      spawn,          {.v = screenshot } },
  	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
