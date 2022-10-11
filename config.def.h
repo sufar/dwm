@@ -71,7 +71,6 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 //static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 //static const char *dmenucmd[] = { "rofi", "-show", "drun", NULL };
 static const char *dmenucmd[] = { "rofi", "-no-lazy-grab","-show", "drun", "-modi", "drun", "-show-icons", NULL };
@@ -89,7 +88,7 @@ static const char scratchpadname[] = "scratchpad";
 // 120*34
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "160x52", NULL };
 
-static Key keys[] = {
+static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ 0,                       	0x1008FF11,     spawn,         {.v = voldown } },
 	{ 0,                       	0x1008FF13,     spawn,         {.v = volup } },
@@ -146,7 +145,7 @@ static Key keys[] = {
 
 /* button definitions */
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
-static Button buttons[] = {
+static const Button buttons[] = {
 	/* click                event mask      button          function        argument */
   { ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
