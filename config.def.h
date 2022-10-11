@@ -29,8 +29,8 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "﬏", "", "","", "", "" };
-static const char *defaulttagapps[] = { "alacritty", "google-chrome-stable", "intellij-idea-ultimate-edition", "code", "WizNote", "VirtualBox", "wps", "dbeaver", "netease-cloud-music" };
+static const char *tags[] = { "", "", "", "﬏", "", "", "", "", "" };
+static const char *defaulttagapps[] = { "alacritty", "google-chrome-stable", "intellij-idea-ultimate-edition", "code", "VirtualBox", "WizNote", "wps", "dbeaver", "netease-cloud-music" };
 
 /* Lockfile */
 static char lockfile[] = "/tmp/dwm.lock";
