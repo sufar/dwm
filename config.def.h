@@ -22,15 +22,46 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
-static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
-	[SchemeStatus]  = { col_gray3, col_gray1,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeTagsSel]  = { col_gray4, col_cyan,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
-	[SchemeTagsNorm]  = { col_gray3, col_gray1,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
-	[SchemeInfoSel]  = { col_gray4, col_cyan,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
-	[SchemeInfoNorm]  = { col_gray3, col_gray1,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
+
+
+/* colors catppuccin-frappe */
+static const char rosewater[]               = "#f2d5cf";
+static const char flamingo[]                = "#eebebe";
+static const char pink[]                    = "#f4b8e4";
+static const char mauve[]                   = "#ca9ee6";
+static const char red[]                     = "#e78284";
+static const char maroon[]                  = "#ea999c";
+static const char peach[]                   = "#ef9f76";
+static const char yellow[]                  = "#e5c890";
+static const char green[]                   = "#a6d189";
+static const char teal[]                    = "#81c8be";
+static const char sky[]                     = "#99d1db";
+static const char sapphire[]                = "#85c1dc";
+static const char blue[]                    = "#8caaee";
+static const char lavender[]                = "#babbf1";
+static const char text[]                    = "#c6d0f5";
+static const char subtext1[]                = "#b5bfe2";
+static const char subtext0[]                = "#a5adce";
+static const char overlay2[]                = "#949cbb";
+static const char overlay1[]                = "#838ba7";
+static const char overlay0[]                = "#737994";
+static const char surface2[]                = "#626880";
+static const char surface1[]                = "#51576d";
+static const char surface0[]                = "#414559";
+static const char base[]                    = "#303446";
+static const char mantle[]                  = "#292c3c";
+static const char crust[]                   = "#232634";
+
+
+static const char *colors[][3] = {
+    /*                    fg     bg      border */
+    [SchemeNorm]      = { text, base,     mantle   },
+    [SchemeSel]       = { text, surface0, subtext0 },
+    [SchemeStatus]    = { text, base,     base     }, // Statusbar right {text,background,not used but cannot be empty}
+    [SchemeTagsSel]   = { base, lavender, base     }, // Tagbar left selected {text,background,not used but cannot be empty}
+    [SchemeTagsNorm]  = { text, base,     base     }, // Tagbar left unselected {text,background,not used but cannot be empty}
+    [SchemeInfoSel]   = { text, base,     base     }, // infobar middle  selected {text,background,not used but cannot be empty}
+    [SchemeInfoNorm]  = { text, base,     base     }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
 /* tagging */
